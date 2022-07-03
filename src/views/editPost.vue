@@ -1,9 +1,8 @@
 <template>
   <div>
-    <div v-for="chat in chats" :key="chat.text">
-      <div v-if="chat.id === id">
-        <p>{{chat.text}}</p>
-        <p>{{chat.num}}</p>
+    <div v-for="post in posts" :key="post.text">
+      <div v-if="post.id === id">
+        <p>{{post.text}}</p>
       </div>
     </div>
   </div>
@@ -14,13 +13,11 @@ import { firestore } from '@/plugins/firebase'
 export default {
   data(){
     return {
-      chats: [],
-      
+      posts: [],
     }
   },
-  
-  firestore: {
-    chats: firestore.collection('chats')
+  firestore:{
+    posts: firestore.collection('posts')
   },
   props: {
     id: {}
