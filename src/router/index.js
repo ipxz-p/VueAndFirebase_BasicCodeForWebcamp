@@ -5,24 +5,15 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import('../views/HomePage.vue')
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: () => import('../views/LoginPage.vue')
-  },
-  {
-    path: '/create',
-    name: 'create',
-    component: () => import('../views/createPost.vue')
+    component: () => import('../views/1.CreateDeleteEdit.vue')
   },
   {
     path: '/edit/:id',
     name: 'edit',
-    component: () => import('../views/editPost.vue'),
-    props: true
+    component: () => import('../views/2.EditPage.vue'),
+    props: true,
   },
+  
 ]
 
 const router = createRouter({
