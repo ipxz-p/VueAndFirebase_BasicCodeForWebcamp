@@ -13,6 +13,16 @@ const routes = [
     component: () => import('../views/2.EditPage.vue'),
     props: true,
   },
+  {
+    path: '/search',
+    name: 'search',
+    component: () => import('../views/3.SearchData.vue')
+  },
+  {
+    path: '/sort',
+    name: 'sort',
+    component: () => import('../views/4.SortingData.vue')
+  },
   
 ]
 

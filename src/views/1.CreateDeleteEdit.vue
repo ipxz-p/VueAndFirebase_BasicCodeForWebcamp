@@ -24,6 +24,7 @@ export default {
   data(){
     return {
       chat: '',
+      chat2: '',
       chats: []
     }
   },
@@ -46,7 +47,7 @@ export default {
       } catch (error) {
         alert(error)
       }
-    }
+    },
   }
 }
 </script>
